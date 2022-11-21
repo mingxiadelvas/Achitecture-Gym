@@ -1,0 +1,16 @@
+Risques : 
+
+Risque 1 : Base de donnée corrompue (Panne Hardware du disque dur)
+Solution : Redondance des données (RAID 1) et sur le cloud 
+
+Risque 2 : Perte de connexion avec la base de données si elle n'est pas locale
+Solution : Hébergement hybride des données, en local et sur le cloud.
+
+Risque 3 : Fuite de données
+Solution : Mise en place d'une solution d'encryption des données afin de n'autoriser que le personnel à consulter les données stockées
+
+Risque 4 : Le terminal de l'agent tombe en panne 
+Solution : Toujours avoir un terminal de secours à disposition
+
+Risque 5 : Un professionnel donne un cours pour lequel il n'a pas les compétences
+Solution : Demander un minimum de 2 ans d'expérience au domaine spécifique pour donner le cours

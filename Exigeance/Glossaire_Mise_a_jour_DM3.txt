@@ -1,0 +1,7 @@
+Glossaire (Mise à jour)
+
+Code QR : Représente le numéro du membre qui est affiché sur l'écran de l'appareil mobile.
+Lecteur de code QR : Lecteur qui scan le code QR et donne accès au GYM lorsque le code est valide.
+Liste des services : Liste des services qui ont été offert au membre.
+Facture : Facture de la liste des services dont le membre a participer au cours de la semaine.
+Rapports de membre/professionnel : Chaque rapport doit contenir son nom, la date du rapport.

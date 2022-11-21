@@ -1,0 +1,35 @@
+Dans l'interface main créée afin de séparer les interfaces, Tapez M ou D afin de sélectionner quel logiciel vous souhaitez lancer.
+
+Dans l'interface Mobile : 
+
+Commencez par suive les instructions en confirmant si vous êtes un professionnel ou un membre.
+Rentrez votre adresse e-mail assignée à votre compte
+Tappez aide pour la liste des commandes disponibles pour votre compte.
+
+Cas : Membre : 
+Tapez 1 pour le répertoire des services
+Tapez 2 pour l'inscription à une séance
+
+Cas : Pro :
+Tapez 1 pour consulter les inscriptions a vos séances d'aujourd'hui
+Tapez 2 pour confirmer l'inscription d'un membre à une de vos séances
+----
+Dans l'interface Desktop : 
+
+Tapez aide pour une liste des commandes.
+Tapez le chiffre correspondant a la commande et assurez vous d'avoir entré toutes les données correctement.
+Tapez 1 pour la commande Adhésion Membre
+Tapez 2 pour la commande Modification Membre
+Tapez 3 pour la commande Suppression Membre
+Tapez 4 pour la commande Retrouver Numero Membre
+Tapez 5 pour la commande Verification Membre
+Tapez 6 pour la commande Adhesion Pro
+Tapez 7 pour la commande Retrouver Numero Pro
+Tapez 8 pour la commande Consultation Seances
+Tapez 9 pour la commande Inscription Seance
+Tapez 10 pour la commande Confirmer Seance		
+Tapez 11 pour la commande Ajouter service
+Tapez 12 pour la commande Mise a jour service
+Tapez 13 pour la commande Supprimer service
+Pour la commande secrète : Le manager doit rentrer son mot de passe.
+Dans ce programme, il est important de faire attention aux données rentrées afin de maintenir une bonne fonctionnalité de l'application.

@@ -1,0 +1,61 @@
+Cas d'utilisation : Adhésion d'un membre.
+    But : Création d’un dossier d'un membre de #GYM
+    Préconditions : Le membre n'est pas inscrit à #GYM et désire s'inscrire.
+    Acteurs : L'agent(acteur principal) et le membre(acteur secondaire).
+    Scénario principal : 
+    1.  Le membre arrive à la réception du centre pour créer son compte #GYM.
+    2.  L’agent lui demande des informations personnelles ainsi que son compte Facebook valide (courriel) et ce qu'il veut faire.
+    3.  L’agent entre les informations du membre dans le système avec la requête.
+    4.  Appelle de vérification du status d'un membre.
+    5.  Le membre paie ses frais d'adhésion.
+    6.  La transaction a été acceptée.
+    7.  Le système assigne au nouveau membre un numéro unique de membre (mID).
+    Scénarios alternatifs :
+    4a. Le système détecte que le status du membre ne permet pas la modification demandée.
+      4a.1. Un message affiche sur l'écran que le client avait déjà un compte chez #GYM.
+      4a.2. L’agent annule la requête et indique le problème au membre.
+    6a. La transaction a été refusée.
+      6a.1. Le système n'assigne pas un nouveau numéro unique de membre.
+    Postconditions : Retour à l'écran d' d'accueil.
+
+    Cas d'utilisation : Adhésion d'un professionnel.
+    But : Création d’un dossier pour un nouveau professionnel désirant exercer au #GYM. 
+    Préconditions : Le professionnel n'est pas déjà inscrit à #GYM.
+    Acteurs : L'agent(acteur principal) et le professionnel(acteur secondaire).
+    Scénario principal : 
+    1.  Le professionnel arrive à la réception du centre pour s’inscrire au #GYM.
+    2.  L’agent lui demande des informations professionnelles ainsi que son compte Facebook valide (courriel) pour la création du nouveau dossier.
+    3.  L’agent rentre les informations du nouveau professionnel dans le système.
+    4.  Le système enregistre les nouvelles données et s'assure qu'il ne s'agit pas d'un doublon.
+    5.  Création d’un profil professionnel.
+    6.  Le système assigne au nouveau professionnel un numéro pro unique(pID).
+    7.  Le nouveau professionnel peut désormais commencer à créer des séances de service.
+    Scénarios alternatifs : 
+    4a. Le système détecte un doublon et affiche un message d’erreur lors de la création du dossier.
+      4a.1. L’agent annule le dossier et indique au professionnel qu'il est déjà inscrit.
+      4a.2. Procédure pour retrouver le numéro pro unique (pID) commence.
+    Postconditions : Retour à l'écran d'accueil.
+
+    Cas d'utilisation : Confirmer une séance
+    But : Autoriser l'accès d'un membre à une séance ou service a laquelle il s'est inscrit précédemment. 
+    Préconditions : Le membre doit déjà être inscrit à l'activité et avoir a portée de main son numéro unique de membre (mID) et le code de service de la séance (sID).
+    Acteurs : L'agent(acteur principal) et le membre(acteur secondaire).
+    Scénario principal : 
+    1.  Le membre arrive à la réception pour confirmer sa présence à une activité et y accéder, Il donne son code de service de la séance (sID).
+    2.  L’agent affiche le répertoire de services et recherche la séance correspondante au code de service.
+    3.  L'agent sélectionne la séance correspondante et rentre le numéro unique du membre (mID) dans la case "Confirmer l'inscription"
+    4.  Le système confirme que le membre est inscrit.
+    5.  L'agent autorise l'accès au membre à l'activité.
+    Scénarios alternatifs : 
+    1a. Le membre confirme sa présence à l'aide du lecteur de code QR près des tourniquets.
+      1a.1. Le membre a accès au GYM.
+    3a. L'agent ne trouve pas de séance correspondant au code de service (sID) fourni
+      3a.1. L'agent demande au membre de vérifier le répertoire de services afin de s'assurer qu'il ne s'est pas trompé de séance.
+      3a.2. Procédure pour vérifier le Répertoire des services commence.
+    4a. Le numéro unique de membre (mID) du membre est invalide, inexistant ou suspendu.
+      4a.1. L’agent dit au membre que soit il n'a pas de compte, soit le numéro unique de membre (mID) qu'il a communiqué est invalide ou soit il n'a pas payé ses frais.
+      4a.2. Procédure pour retrouver le numéro unique de membre (mID) commence.
+    4b. Le membre n'est pas inscrit.
+      4b.1. L'agent dit au membre qu'il ne s'est pas inscrit au cours et qu'il doit procéder à l'inscription d'abord puis la confirmer.
+      4b.2. Procédure d'inscription à l'activité commence.
+    Postconditions : Retour à l'écran d'accueil.

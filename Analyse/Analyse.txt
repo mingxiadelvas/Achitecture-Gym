@@ -1,0 +1,23 @@
+Quelles parties seront informatisées et comment ? 
+Les parties informatisées seront une base de donnée contenant un fichier registre de : Membres, Professionnels, Services & Inscriptions et le logiciel interagissant avec.
+    
+Où seront stockées les données ? 
+Dans la base de données avec laquelle le logiciel interagira, peut être stockée en local ou sur le réseau.
+
+Quel matériel sera nécessaire ? 
+Un serveur qui va hoster la base de données, un ordinateur qui va servir de terminal à l'agent afin d'effectuer des actions avec la base de données.
+Le serveur peut aussi être la machine servant de terminal.
+
+Comment le système #GYM que vous développez interagira avec les autres systèmes ? 
+Le système GYM s'exécute sur le terminal de l'employé et fonctionne en accédant et modifiant les données stockées sur la base de données.
+
+Comment les utilisateurs interagiront avec le système ? 
+L'employé peut écrire des commandes afin d'effectuer les actions décrites dans les cas d'utilisation
+
+Exemple de fonctions : 
+Créer, Vérifier ou retrouver l'identifiant de membre/professionnel
+Créer un service, vérifier le code du service
+Inscrire ou confirmer l'inscription à une séance
+Vérifier la capacité
+Retourner la liste des inscriptions à un service
+Retourner un registre des services 

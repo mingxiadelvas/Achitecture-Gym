@@ -1,0 +1,278 @@
+<html><head></head><body>
+    <h1 style="text-align: center;">
+        IFT 2255 - Devoir 3</h1>
+    <h2>
+        Information générale</h2>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Ming-Xia Delvas
+        <br>
+        <span style="font-weight: bold;">Matricule: </span>4038
+        <br>
+        <span style="font-weight: bold;">Courriel: </span>ming-xia.delvas@umontreal.ca
+        <br>
+        <span style="font-weight: bold;">temps mis: </span>70 heures
+    </p>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Simo Hakim
+        <br>
+        <span style="font-weight: bold;">Matricule: </span>6040
+        <br>
+        <span style="font-weight: bold;">Courriel: </span>simo.hakim@umontreal.ca
+        <br>
+        <span style="font-weight: bold;">temps mis: </span>80 heures
+    </p>
+
+        Distribution des tâches
+    <p>
+        <span style="font-weight: bold;">Soumetteur: </span>Ming-Xia Delvas
+    </p>
+    <table cellpadding="7px">
+        <thead>
+            <tr>
+                <th class="first_col">
+                    Tâche
+                </th>
+                <th>
+                    Ming-Xia
+                </th>
+                <th>
+                    Simo
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+Tâche 1 : Mise à jour de vos artéfacts                </td>
+                <td>90%</td>
+                
+                <td>10%</td>
+            </tr>
+<tr>
+     </tr><tr>
+                <td>
+Tâche 2 : Code source Java du programme et cohérence entre la conception et l'implémentation                </td>
+                <td>20%</td>
+                
+                <td>80%</td>
+            </tr>
+<tr>
+                <td>
+Tâche 3 : Tests unitaires en JUnit
+                </td>
+                <td>
+50%                </td>
+                
+                <td>
+50%                </td>
+            </tr>
+<tr>
+                <td>Tâche 4 : Manuel utilisateur
+
+</td>
+                <td>30%</td>
+                
+                <td>70%</td>
+            </tr>
+<tr>
+                <td>Tâche 5 : JavaDocs générés
+
+</td>
+                <td>40%</td>
+                
+                <td>60%</td>
+            </tr>
+     
+        </tbody>
+    </table>
+        <h2>Tâche 1 : Révision des artéfacts</h2>
+		<h3>Glossaire</h3>
+<p>Voici le lien vers le glossaire.</p>
+
+<li>Voici un <a href="Exigeance/Mise_a_jour_CU_DM3.txt">lien</a> vers le fichier texte.</li>
+<li>Solution affichée directement ici :</li>
+
+   <pre style="font-family: 'Times New Roman', Times, serif"> 
+   <span style="font-weight: bold;">Code QR :</span> Représente le numéro du membre qui est affiché sur l'écran de l'appareil mobile.
+   <span style="font-weight: bold;">Lecteur de code QR :</span> Lecteur qui scan le code QR et donne accès au GYM lorsque le code est valide.
+   <span style="font-weight: bold;">Liste des services :</span>  Liste des services qui ont été offert au membre.
+   <span style="font-weight: bold;">Facture :</span> Facture de la liste des services dont le membre a participer au cours de la semaine.
+   <span style="font-weight: bold;">Rapports de membre/professionnel :</span> Chaque rapport doit contenir son nom, la date du rapport.
+   </pre>
+    
+    
+    
+
+
+
+    <pre style="font-family: 'Times New Roman', Times, serif">    
+    <span style="font-weight: bold;">Cas d'utilisation :</span> Adhésion d'un membre.
+    <span style="font-weight: bold;">But :</span> Création d’un dossier d'un membre de #GYM
+    <span style="font-weight: bold;">Préconditions :</span> Le membre n'est pas inscrit à #GYM et désire s'inscrire.
+    <span style="font-weight: bold;">Acteurs :</span> L'agent(acteur principal) et le membre(acteur secondaire).
+    <span style="font-weight: bold;">Scénario principal :</span> 
+    1.  Le membre arrive à la réception du centre pour créer son compte #GYM.
+    2.  L’agent lui demande des informations personnelles ainsi que son compte Facebook valide (courriel) et ce qu'il veut faire.
+    3.  L’agent entre les informations du membre dans le système avec la requête.
+    4.  Appelle de vérification du status d'un membre.
+    5.  Le membre paie ses frais d'adhésion.
+    6.  La transaction a été acceptée.
+    7.  Le système assigne au nouveau membre un numéro unique de membre (mID).
+    <span style="font-weight: bold;">Scénarios alternatifs :</span>
+    4a. Le système détecte que le status du membre ne permet pas la modification demandée.
+      4a.1. Un message affiche sur l'écran que le client avait déjà un compte chez #GYM.
+      4a.2. L’agent annule la requête et indique le problème au membre.
+    6a. La transaction a été refusée.
+      6a.1. Le système n'assigne pas un nouveau numéro unique de membre.
+    <span style="font-weight: bold;">Postconditions :</span> Retour à l'écran d' d'accueil.
+    
+    <span style="font-weight: bold;">Cas d'utilisation :</span> Confirmer une séance
+    <span style="font-weight: bold;">But :</span> Autoriser l'accès d'un membre à une séance ou service a laquelle il s'est inscrit précédemment. 
+    <span style="font-weight: bold;">Préconditions :</span> Le membre doit déjà être inscrit à l'activité et avoir a portée de main son numéro unique de membre (mID) et le code de service de la séance (sID).
+    <span style="font-weight: bold;">Acteurs :</span> L'agent(acteur principal) et le membre(acteur secondaire).
+    <span style="font-weight: bold;">Scénario principal :</span> 
+    1.  Le membre arrive à la réception pour confirmer sa présence à une activité et y accéder, Il donne son code de service de la séance (sID).
+    2.  L’agent affiche le répertoire de services et recherche la séance correspondante au code de service.
+    3.  L'agent sélectionne la séance correspondante et rentre le numéro unique du membre (mID) dans la case "Confirmer l'inscription"
+    4.  Le système confirme que le membre est inscrit.
+    5.  L'agent autorise l'accès au membre à l'activité.
+    <span style="font-weight: bold;">Scénarios alternatifs :</span>
+    1a. Le membre confirme sa présence à l'aide du lecteur de code QR près des tourniquets.
+      1a.1. Le membre a accès au GYM.
+    3a. L'agent ne trouve pas de séance correspondant au code de service (sID) fourni
+      3a.1. L'agent demande au membre de vérifier le répertoire de services afin de s'assurer qu'il ne s'est pas trompé de séance.
+      3a.2. Procédure pour vérifier le Répertoire des services commence.
+    4a. Le numéro unique de membre (mID) du membre est invalide, inexistant ou suspendu.
+      4a.1. L’agent dit au membre que soit il n'a pas de compte, soit le numéro unique de membre (mID) qu'il a communiqué est invalide ou soit il n'a pas payé ses frais.
+      4a.2. Procédure pour retrouver le numéro unique de membre (mID) commence.
+    4b. Le membre n'est pas inscrit.
+      4b.1. L'agent dit au membre qu'il ne s'est pas inscrit au cours et qu'il doit procéder à l'inscription d'abord puis la confirmer.
+      4b.2. Procédure d'inscription à l'activité commence.
+    <span style="font-weight: bold;">Postconditions :</span> Retour à l'écran d'accueil.
+
+    <span style="font-weight: bold;">Cas d'utilisation :</span> Adhésion d'un professionnel.
+    <span style="font-weight: bold;">But :</span> Création d’un dossier pour un nouveau professionnel désirant exercer au #GYM. 
+    <span style="font-weight: bold;">Préconditions :</span> Le professionnel n'est pas déjà inscrit à #GYM.
+    <span style="font-weight: bold;">Acteurs :</span> L'agent(acteur principal) et le professionnel(acteur secondaire).
+    <span style="font-weight: bold;">Scénario principal :</span> 
+    1.  Le professionnel arrive à la réception du centre pour s’inscrire au #GYM.
+    2.  L’agent lui demande des informations professionnelles ainsi que son compte Facebook valide (courriel) pour la création du nouveau dossier.
+    3.  L’agent rentre les informations du nouveau professionnel dans le système.
+    4.  Le système enregistre les nouvelles données et s'assure qu'il ne s'agit pas d'un doublon.
+    5.  Création d’un profil professionnel.
+    6.  Le système assigne au nouveau professionnel un numéro pro unique(pID).
+    7.  Le nouveau professionnel peut désormais commencer à créer des séances de service.
+    <span style="font-weight: bold;">Scénarios alternatifs :</span> 
+    4a. Le système détecte un doublon et affiche un message d’erreur lors de la création du dossier.
+      4a.1. L’agent annule le dossier et indique au professionnel qu'il est déjà inscrit.
+      4a.2. Procédure pour retrouver le numéro pro unique (pID) commence.
+    <span style="font-weight: bold;">Postconditions :</span> Retour à l'écran d'accueil.
+    </pre>
+
+    <h3>Risques</h3>
+<pre style="font-family: 'Times New Roman', Times, serif">    
+
+    <span style="font-weight: bold;">Risque 4 :</span> Un professionnel donne un cours pour lequel il n'a pas les compétences.
+    <span style="font-weight: bold;">Solution :</span> Demander un minimum de 2 ans d'expérience au domaine spécifique pour donner le cours.
+    </pre>
+<ul><li>Voici un <a href="Analyse/Risques_Mise_a_jour.txt">lien</a> vers le fichier du texte.</li></ul>
+    
+    <h3>Exigences non fonctionnels</h3><pre style="font-family: 'Times New Roman', Times, serif">    
+    <span style="font-weight: bold;">Contrainte sur le temps de réponse :</span> Le système doit assigner un identifiant (mID, sID, pID) en deux secondes pour la création d'une entrée dans la base de données.
+    
+    <span style="font-weight: bold;">Contrainte sur le temps de réponse :</span> Le système doit prendre une seconde pour vérifier la validité d'un identifiant (mID, sID, pID)
+
+
+    <span style="font-weight: bold;">Contrainte sur la disponibilité :</span> Le système doit continuer de fonctionner et d'enregistrer les nouvelles données même si plusieurs personnes 
+    utilisent le logiciel en même temps.
+
+    <span style="font-weight: bold;">Contrainte sur l'utilisabilité :</span> Le système doit être simple afin que tout le monde sache l'utiliser.
+
+
+    <span style="font-weight: bold;">Contrainte sur l'adaptabilité :</span> Il est possible de choisir entre le français ou l'anglais. Ainsi, les gens ne parlant pas français
+    pourront choisir les instruction en anglais et vice-versa.
+    </pre>
+    <ul><li>Voici un <a href="Exigeance/Besoins_non_fonctionnels_Mise_a_jour.txt">lien</a> vers le fichier texte.</li></ul>
+
+    <h3>Analyse</h3>
+<pre style="font-family: 'Times New Roman', Times, serif">    
+    <span style="font-weight: bold;">Quelles parties seront informatisées et comment ?</span> 
+    Les parties informatisées seront une base de donnée contenant un fichier registre de : Membres, Professionnels, Services &amp; Inscriptions et le logiciel interagissant avec.
+    
+    <span style="font-weight: bold;">- Où seront stockées les données ?</span> 
+    Dans la base de données avec laquelle le logiciel interagira, peut être stockée en local ou sur le réseau.
+
+
+    <span style="font-weight: bold;">Quel matériel sera nécessaire ?</span> 
+    Un serveur qui va hoster la base de données, un ordinateur qui va servir de terminal à l'agent afin d'effectuer des actions avec la base de données.
+    Le serveur peut aussi être la machine servant de terminal.
+
+    <span style="font-weight: bold;">Comment le système #GYM que vous développez interagira avec les autres systèmes ?</span> 
+    Le système GYM s'exécute sur le terminal de l'employé et fonctionne en accédant et modifiant les données stockées sur la base de données.
+
+
+    <span style="font-weight: bold;">Comment les utilisateurs interagiront avec le système ?</span> 
+    L'employé peut écrire des commandes afin d'effectuer les actions décrites dans les cas d'utilisation
+
+     <span style="font-weight: bold;">Exemple de fonctions :</span> 
+     <span style="font-weight: italic;">Créer, Vérifier ou retrouver l'identifiant de membre/professionnel
+    Créer un service, vérifier le code du service
+    Inscrire ou confirmer l'inscription à une séance
+    Vérifier la capacité
+    Retourner la liste des inscriptions à un service
+    Retourner un registre des services</span> 
+    </pre>
+    <ul><li>Voici un <a href="Analyse/Analyse.txt">lien</a> vers le fichier texte.</li></ul>
+
+    <h3>Diagramme d'activité UML</h3>
+    <ul><li>Voici un <a href="Analyse/Diagrammes d'activités.zip">lien</a> vers le fichier l'archive ZIP contenant les différents fichiers VPP.</li>
+        <li>Images affichées directement ci dessous :</li>
+<img src="Analyse/Diagramme_activite_point_entre_Mise_a_jour_DM3.jpg" alt="Point d'entrée" height="400px">
+<img src="Analyse/Diagramme_activite_Procedure_Comptable.jpg" height="400px" alt="Procédure comptable">
+</ul>
+<h3>Diagramme de classe UML</h3>
+<ul>
+        <li>Voici un <a href="Conception/Diagramme_classes_DM3.vpp">lien</a> vers le fichier VPP.</li>
+        <li>Images affichées directement ci dessous :</li>
+    </ul>
+    
+    <p><img src="Conception/Diagramme_classes_DM3.jpg" width="800px" alt="Diagramme de classe UML"><br></p>
+
+
+
+<h3>Diagramme de séquence UML</h3>
+<ul>
+        <li>Voici un <a href="Conception/Diagramme de séquence.zip">lien</a> vers l'archive contenant les fichers VPP.</li>
+        <li>Images affichées directement ci dessous :</li>
+    </ul>
+<ul>    
+        <p><img src="Conception/diagramme_sequence_ajout_mise_a_jour_supprimer_membre_DM3.jpg" width="800px" alt="Inscription Seance"><br></p>
+	<p><img src="Conception/diagramme_sequence_ajout_mise_a_jour_supprimer_service_DM3.jpg" width="800px" alt="Ajout Mise à jour Supprimer membre"><br></p>
+	<p><img src="Conception/diagramme_sequence_confirmation_presence_DM3.jpg" width="800px" alt="Ajout Mise à jour Supprimer service"><br></p>
+	<p><img src="Conception/diagramme_sequence_inscriptionSeance_DM3.jpg" width="800px" alt="Confirmation Inscription"><br></p>
+</ul>
+
+
+
+<h2>Tâche 2 : Implémentation</h2>
+<ul>
+        <li>Voici un <a href="/Implémentation/TP3Genie/runnable.jar">lien</a> vers le fichier java executable JAR.
+</li><li>Voici un <a href="/Implémentation/TP3Genie/compressed.jar">lien</a> vers l'archive JAR.</li>
+    </ul>
+
+
+<h2>Tâche 3 : Tests unitaires</h2>
+<li>Voici un <a href="Implémentation/TP3Genie/Tests/testJunit.java">lien</a> vers le fichier java des tests.</li>
+<li>Screenshot affiché directement ci dessous :</li>
+<li><img alt="Tests" width="800px" src="Tests/tests.png"></li>
+
+<h2>Tâche 5 : JavaDoc</h2><ul>
+        <li>Voici un <a href="Documentation/index.html">lien</a> vers la javadoc.
+</li>
+    </ul>
+<h2>Statistiques bitbucket : </h2>
+<li><img alt="Stats" width="800px" src="Conception/stats.png"></li>
+<li></li>
+
+
+</body></html>

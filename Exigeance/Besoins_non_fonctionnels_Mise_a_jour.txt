@@ -1,0 +1,12 @@
+Contrainte sur le temps de réponse : Le système doit assigner un identifiant (mID, sID, pID) en deux secondes pour la création 
+d'une entrée dans la base de données.
+
+Contrainte sur le temps de réponse : Le système doit prendre une seconde pour vérifier la validité d'un identifiant (mID, sID, pID)
+
+Contrainte sur la disponibilité : Le système doit continuer de fonctionner et d'enregistrer les nouvelles données même si plusieurs 
+personnes utilisent le logiciel en même temps.
+
+Contrainte sur l'utilisabilité : Le système doit être simple afin que tout le monde sache l'utiliser.
+
+Contrainte sur l'adaptabilité : Il est possible de choisir entre le français ou l'anglais. Ainsi, les gens ne parlant pas français
+pourront choisir les instruction en anglais et vice-versa.
